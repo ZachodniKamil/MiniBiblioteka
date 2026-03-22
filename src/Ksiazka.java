@@ -1,14 +1,15 @@
-import java.util.Scanner;
 
-public class Książka {
+
+public class Ksiazka {
     private String tytul;
     private String autor;
     private int liczbaStron;
     private boolean dostepna;
 
-    public Książka(String tytul, String autor, int liczbaStron, boolean dostepna) {
-        this.tytul = tytul;
+
+    public Ksiazka(String tytul, String autor, int liczbaStron, boolean dostepna){
         this.autor = autor;
+        this.tytul = tytul;
         this.liczbaStron = liczbaStron;
         this.dostepna = dostepna;
     }
@@ -36,5 +37,13 @@ public class Książka {
         } else {
             System.out.println("Książka nie jest wypożyczona");
         }
+    }
+
+    public boolean jestDostepna(){
+        return this.dostepna;
+    }
+
+    public String dajTytul(){
+        return this.tytul;
     }
 }
